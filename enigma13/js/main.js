@@ -27,41 +27,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // YouTube Hero Video Autoplay & Mobile Fallback Controller
-    const ytIframe = document.getElementById('yt-hero-player');
-    
-    function sendYtCommand(func) {
-        if (ytIframe && ytIframe.contentWindow) {
-            ytIframe.contentWindow.postMessage(JSON.stringify({
-                event: 'command',
-                func: func,
-                args: []
-            }), '*');
-        }
-    }
-
-    // Try to trigger playback automatically
-    if (ytIframe) {
-        // Repeated play attempt on load
-        setTimeout(function() {
-            sendYtCommand('mute');
-            sendYtCommand('playVideo');
-        }, 800);
+    // Hero Video Autoplay & Compatibility Controller
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        // Force muted inline autoplay
+        heroVideo.muted = true;
+        heroVideo.defaultMuted = true;
         
-        setTimeout(function() {
-            sendYtCommand('playVideo');
-        }, 2000);
-
-        // Mobile autoplay fallback: first touch on screen starts playback
-        const triggerPlayOnTouch = function() {
-            sendYtCommand('mute');
-            sendYtCommand('playVideo');
-            window.removeEventListener('touchstart', triggerPlayOnTouch);
-            window.removeEventListener('click', triggerPlayOnTouch);
+        const tryPlayVideo = function() {
+            const playPromise = heroVideo.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function(error) {
+                    console.log('Autoplay deferred until user interaction:', error);
+                });
+            }
         };
 
-        window.addEventListener('touchstart', triggerPlayOnTouch, { passive: true });
-        window.addEventListener('click', triggerPlayOnTouch, { passive: true });
+        tryPlayVideo();
+
+        heroVideo.addEventListener('loadedmetadata', tryPlayVideo);
+        heroVideo.addEventListener('canplay', tryPlayVideo);
+
+        // Mobile fallback: First touch or scroll kicks off playback if OS deferred it
+        const startOnInteraction = function() {
+            if (heroVideo.paused) {
+                heroVideo.play().catch(function() {});
+            }
+            window.removeEventListener('touchstart', startOnInteraction);
+            window.removeEventListener('click', startOnInteraction);
+            window.removeEventListener('scroll', startOnInteraction);
+        };
+
+        window.addEventListener('touchstart', startOnInteraction, { passive: true, once: true });
+        window.addEventListener('click', startOnInteraction, { once: true });
+        window.addEventListener('scroll', startOnInteraction, { passive: true, once: true });
     }
     
     // Keyboard navigation for mobile menu

@@ -24,29 +24,14 @@
     overflow: hidden;
 }
 
-/* Override the conflicting inline <style> block in index.html */
-.yt-bg {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    /* Make the iframe always wider than viewport to prevent black bars */
-    width: max(100vw, 177.78vh) !important;
-    height: max(100vh, 56.25vw) !important;
-    min-width: 100vw !important;
-    min-height: 100vh !important;
-    overflow: hidden !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-}
-
-.yt-bg iframe {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    border: none !important;
-    pointer-events: none !important;
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
     filter: brightness(0.85) saturate(1.1);
 }
 
