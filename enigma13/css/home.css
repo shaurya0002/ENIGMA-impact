@@ -1910,22 +1910,14 @@
         font-size: clamp(0.9rem, 3vw, 1.2rem);
     }
 
-    /* On mobile, show poster as background */
+    /* Keep video fully visible on mobile */
     .hero-video {
         display: block;
         object-fit: cover;
     }
 
-    /* Ensure hero section is visible even without video */
     .hero-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
-        z-index: 1;
+        display: none;
     }
 
     /* Only show fallback if video really doesn't work */

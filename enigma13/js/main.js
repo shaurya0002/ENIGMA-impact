@@ -27,64 +27,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Hero Video - Loads immediately and plays fast
-    const heroVideo = document.querySelector('.hero-video');
-    const fallback = document.querySelector('.hero-fallback');
+    // YouTube Hero Video Autoplay & Mobile Fallback Controller
+    const ytIframe = document.getElementById('yt-hero-player');
     
-    if (heroVideo) {
-        // Video is already set with src attribute for immediate loading
-        // Ensure it plays as soon as it can
-        heroVideo.addEventListener('canplay', function() {
-            // Try to play immediately when ready
-            if (heroVideo.paused) {
-                heroVideo.play().catch(function(error) {
-                    // Autoplay prevented - normal on some browsers
-                    console.log('Video autoplay prevented:', error);
-                });
-            }
-        }, { once: true });
-        
-        // Handle successful load
-        heroVideo.addEventListener('loadeddata', function() {
-            console.log('Hero video loaded successfully');
-            // Try to play
-            heroVideo.play().catch(function(error) {
-                console.log('Video play:', error);
-            });
-        }, { once: true });
-        
-        // Handle load error
-        heroVideo.addEventListener('error', function(e) {
-            console.log('Video failed to load');
-            if (fallback) {
-                fallback.classList.add('show-fallback');
-            }
-        }, { once: true });
-    }
-    
-    // Video loads immediately via src attribute - no observer needed
-    // Additional play attempts for better compatibility
-    if (heroVideo) {
-        const heroSection = document.querySelector('.hero-section');
-        if (heroSection) {
-            // Mobile: Allow user interaction to play video if autoplay is blocked
-            if (window.innerWidth < 768) {
-                let userInteracted = false;
-                
-                const startVideoOnInteraction = function() {
-                    if (!userInteracted && heroVideo && heroVideo.paused) {
-                        userInteracted = true;
-                        heroVideo.play().catch(function(error) {
-                            console.log('User-initiated video play failed:', error);
-                        });
-                    }
-                };
-                
-                // Listen for touch/click events on mobile
-                heroSection.addEventListener('touchstart', startVideoOnInteraction, { once: true, passive: true });
-                heroSection.addEventListener('click', startVideoOnInteraction, { once: true });
-            }
+    function sendYtCommand(func) {
+        if (ytIframe && ytIframe.contentWindow) {
+            ytIframe.contentWindow.postMessage(JSON.stringify({
+                event: 'command',
+                func: func,
+                args: []
+            }), '*');
         }
+    }
+
+    // Try to trigger playback automatically
+    if (ytIframe) {
+        // Repeated play attempt on load
+        setTimeout(function() {
+            sendYtCommand('mute');
+            sendYtCommand('playVideo');
+        }, 800);
+        
+        setTimeout(function() {
+            sendYtCommand('playVideo');
+        }, 2000);
+
+        // Mobile autoplay fallback: first touch on screen starts playback
+        const triggerPlayOnTouch = function() {
+            sendYtCommand('mute');
+            sendYtCommand('playVideo');
+            window.removeEventListener('touchstart', triggerPlayOnTouch);
+            window.removeEventListener('click', triggerPlayOnTouch);
+        };
+
+        window.addEventListener('touchstart', triggerPlayOnTouch, { passive: true });
+        window.addEventListener('click', triggerPlayOnTouch, { passive: true });
     }
     
     // Keyboard navigation for mobile menu
