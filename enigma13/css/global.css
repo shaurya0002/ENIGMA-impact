@@ -7,26 +7,32 @@
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Lato', sans-serif;
 
-    /* Color Palette Variables */
-    --color-primary: #00FFFF;        /* Bright Cyan - Main CTA buttons, links, accents */
-    --color-secondary: #FF00FF;      /* Bright Magenta - Accent borders, hover effects */
-    --color-bg: #0A0A0A;             /* Main Background - Dark black */
-    --color-surface: #111111;        /* Card Backgrounds - Slightly lighter black */
-    --color-text-primary: #FFFFFF;   /* Main Text, Headings - White */
-    --color-text-secondary: #AAAAAA; /* Sub-headings, meta-text - Light gray */
+    /* Clean College Fest Palette (Non-Cyberpunk) */
+    --color-primary: #00D4FF;        /* Vibrant Fest Cyan/Blue */
+    --color-secondary: #FFB703;      /* Warm Festival Gold/Amber */
+    --color-accent: #FF5E7E;         /* Warm Coral Highlight */
+    --color-bg: #0A0B10;             /* Clean Deep Fest Background */
+    --color-surface: #12141D;        /* Card Background */
+    --color-surface-card: rgba(18, 20, 29, 0.85);
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-glow: rgba(0, 212, 255, 0.25);
+    --color-text-primary: #FFFFFF;   /* Main Text */
+    --color-text-secondary: #9BA1B5; /* Sub-headings, meta-text */
 
     /* Spacing Variables */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
+    --spacing-md: 1.75rem;
+    --spacing-lg: 3.5rem;
+    --spacing-xl: 5.5rem;
+    --spacing-xxl: 7.5rem;
 
     /* Border Radius */
-    --radius-sm: 4px;
-    --radius-md: 8px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
     --radius-lg: 16px;
     --radius-xl: 24px;
+    --radius-full: 9999px;
 
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -98,7 +104,7 @@ body {
     font-family: var(--font-body);
     background-color: var(--color-bg);
     color: var(--color-text-primary);
-    line-height: 1.6;
+    line-height: 1.65;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -120,39 +126,42 @@ body {
 }
 
 /* ============================================
-   Typography
+   Typography & Fest Titles
    ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.2;
+    font-weight: 800;
+    line-height: 1.25;
     margin-bottom: var(--spacing-sm);
     color: var(--color-text-primary);
+    letter-spacing: 0.5px;
 }
 
 h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: 1px;
 }
 
 h3 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
 }
 
 p {
     margin-bottom: var(--spacing-sm);
     color: var(--color-text-secondary);
+    font-size: 1.05rem;
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    /* Performance optimizations */
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
 }
@@ -160,93 +169,60 @@ img {
 a {
     color: var(--color-primary);
     text-decoration: none;
-    transition: color var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 a:hover {
-    color: var(--color-secondary);
+    color: #FFFFFF;
 }
 
-/* ============================================
-   Utility Classes
-   ============================================ */
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-}
-
-.section {
-    padding: var(--spacing-xl) 0;
-}
-
-.text-center {
+/* Section Title - Clean College Fest Styling */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
+    margin-bottom: var(--spacing-xl);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    color: #FFFFFF;
+    position: relative;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.sr-only {
+.section-title::after {
+    content: '';
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-.sr-only:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: var(--spacing-xs);
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-}
-
-/* ============================================
-   Skip to Main Content Link
-   ============================================ */
-
-.skip-to-main {
-    position: absolute;
-    top: -100px;
-    left: 0;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
     background: var(--color-primary);
-    color: var(--color-bg);
-    padding: var(--spacing-sm);
-    z-index: 10000;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.skip-to-main:focus {
-    top: 0;
+    border-radius: var(--radius-full);
 }
 
 /* ============================================
-   Custom Scrollbar
+   Custom Scrollbar - Sleek Modern Dark
    ============================================ */
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-bg);
+    background: #0A0B10;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-primary);
-    border-radius: var(--radius-sm);
+    background: #1F2433;
+    border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-secondary);
+    background: var(--color-primary);
 }
 
 /* ============================================
