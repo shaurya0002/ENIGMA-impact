@@ -73,7 +73,7 @@
     position: relative;
     display: inline-block;
     text-shadow: 0 2px 25px rgba(0, 0, 0, 0.9);
-    animation: glitch-skew 2s infinite ease-in-out;
+    animation: glitch 5s infinite ease-in-out;
 }
 
 .hero-title::before,
@@ -91,13 +91,13 @@
 .hero-title::before {
     left: 3px;
     text-shadow: -3px 0 #ff0055, 0 0 10px rgba(255, 0, 85, 0.7);
-    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+    animation: glitch-anim-1 4s infinite linear alternate-reverse;
 }
 
 .hero-title::after {
     left: -3px;
     text-shadow: -3px 0 #00ffff, 2px 2px #ff00de, 0 0 10px rgba(0, 255, 255, 0.7);
-    animation: glitch-anim-2 2s infinite linear alternate-reverse;
+    animation: glitch-anim-2 4s infinite linear alternate-reverse;
 }
 
 @keyframes glitch-anim-1 {
