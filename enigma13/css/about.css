@@ -89,6 +89,66 @@
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.95);
 }
 
+.story-content .story-tagline {
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.95);
+}
+
+.story-edition-block {
+    margin: var(--spacing-xl) auto;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-top: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    max-width: 600px;
+}
+
+.story-edition-block .story-edition-title {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.95);
+}
+
+.story-edition-block .story-edition-date {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--color-primary);
+    margin-bottom: 0;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.95);
+}
+
+.story-bullets {
+    margin: var(--spacing-lg) auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.story-bullets p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0 !important;
+    line-height: 1.6;
+}
+
+.story-content .story-cta {
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    margin-top: var(--spacing-xl);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.95);
+}
+
 /* Team Section — Blurred backdrop */
 .team-section {
     position: relative;
