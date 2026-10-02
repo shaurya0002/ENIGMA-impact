@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Event Detail Page - Dynamic Content Loading
 // ============================================
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Open Mic',
             type: 'Solo (Offline)',
             category: 'Literary',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             eventFormat: 'Open mic style: Poetry, stand-up comedy, storytelling, monologue or any other performance art except for singing and rap.',
             duration: '90-120 seconds per performance',
             venue: 'UCER Auditorium',
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Dramatics/Nukkad Natak',
             type: 'Team (Offline)',
             category: 'Theatre',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             theme: [
                 'Dowry',
                 'Domestic violence and Consequences',
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Chess',
             type: 'Solo (Offline)',
             category: 'Sports',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             format: 'Knockout format',
             timeLimit: 'First round: 7 minutes, Subsequent rounds: 10 minutes each',
             venue: 'UCER Central Library',
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Face Painting (Kaladarshan)',
             type: 'Team (Offline)',
             category: 'Creative',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             teamSize: '2 members (one painter and one model)',
             theme: [
                 'Climate Change',
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Canvas Painting',
             type: 'Solo (Offline)',
             category: 'Creative',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             theme: [
                 'Current Global Concern',
                 'The power of colors',
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Bug Brawl',
             type: 'Solo (Offline)',
             category: 'Creative',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             description: 'BugBrawl solo event challenges individual participants to find and fix as many software bugs as possible within a set time limit. Each participant dives into the code, identifying errors, unexpected behaviors, or potential vulnerabilities. Points are awarded based on the number and complexity of bugs discovered, with top performers earning prizes.',
             objective: 'Test participants\' skills in debugging, accuracy, and speed, providing a focused coding challenge to enhance software quality.',
             date: '21st November 2025',
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Fashion Show - Lights, Camera, Couture!',
             type: 'Solo (Offline)',
             category: 'Fashion',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             theme: 'Bollywood - Celebrate the glitz and glamour of Bollywood! From classic cinema elegance to modern red-carpet looks — embody the true essence of Indian film fashion with confidence and style.',
             competitionStructure: [
                 {
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Dance',
             type: 'Solo/Team (Offline)',
             category: 'Dance',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             screeningRound: {
                 for: 'UGI Students only',
                 date: '20th November',
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Singing',
             type: 'Solo/Group (Offline)',
             category: 'Music',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             categories: 'Two separate categories - Solo and Group',
             venue: 'Audi, UCER',
             performanceDuration: {
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Instrumental',
             type: 'Solo (Offline)',
             category: 'Music',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             date: '22 November 2025',
             day: 'Saturday',
             venue: 'Audi, UIT',
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Roadies',
             type: 'Team (Offline)',
             category: 'Creative',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             rules: [
                 'Team size: 4-6 members.',
                 'Physical challenges and tasks.',
@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Mehndi Art (Kaladarshan)',
             type: 'Solo (Offline)',
             category: 'Creative',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             theme: [
                 'Festive Vibes',
                 'Nature\'s Beauty',
@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Rangoli (Kaladarshan)',
             type: 'Team (Offline)',
             category: 'Creative',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             introduction: 'The Rangoli represents the happiness, positivity and liveliness, and is intended to welcome Lakshmi, the goddess of prosperity and good luck. The purpose of rangoli is beyond decoration. It can display one\'s ideas, imagination, creativity and innovation with the help of colours.',
             theme: [
                 'Sanskriti aur Samriddhi (Culture and Prosperity)',
@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Treasure Hunt - The Guardians and the Portal of Enigmara',
             type: 'Team (Offline)',
             category: 'Creative',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             themeTitle: 'The Guardians and the Portal of Enigmara',
             storyline: 'Earth was once a place of pure light and harmony, protected by four mighty Guardians representing Fire, Water, Air, and Earth. A strange portal appeared, leading to Enigmara—a realm of endless mirages and darkness where evil spirits feed on fear and chaos. The creatures of Enigmara began seeping through the portal, causing despair. The Guardians discovered a prophecy: "To close the portal, the Guardians must venture into the Mirage of Shadows—Where truth is illusion and illusion is truth." Only the one who finds the Key of Enigmara can restore the balance of worlds. The Guardians embarked on this journey, leaving clues, riddles, and symbols. You are the Seekers of Light—chosen to retrace their journey, solve the mysteries, and uncover the Key to close the Portal of Enigmara before darkness consumes the world.',
             mission: [
@@ -515,7 +515,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Web Die',
             type: 'Solo (Offline)',
             category: 'Creative',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             description: 'A competitive front-end web development challenge requiring participants to design and develop a fully functional and visually appealing web page within a limited time based on a provided theme or task.',
             focus: 'Creativity, UI/UX understanding, responsive design skills, and clean coding practices.',
             eligibility: 'Open to all students interested in front-end development. Individual participation only.',
@@ -554,7 +554,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Free Fire',
             type: 'Team (Online)',
             category: 'Gaming',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             teamComposition: 'Each team must consist of 4 Members',
             rounds: [
                 'Initial Rounds (As Per Registration)',
@@ -596,7 +596,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'BGMI (Battle Grounds Mobile India)',
             type: 'Team (Online)',
             category: 'Gaming',
-            fee: '₹250 for two event participation',
+            fee: '₹250 for 3 events participation',
             teamComposition: '4 player team tournament',
             tournamentStructure: [
                 {
