@@ -137,13 +137,13 @@
         image-rendering: crisp-edges;
     }
 
-    /* All Events - Using local images from assets/events grid/ */
+    /* All Events - Using local images from assets/new_events/ */
     /* Literary Events */
     .event-card[data-event="open-mic"] .event-image {
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/open mic.webp');
+            url('../assets/new_events/open_mic.jpg');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -151,22 +151,12 @@
         image-rendering: crisp-edges;
     }
 
-    .event-card[data-event="kbc-quiz"] .event-image {
-        background-color: #1a1a1a;
-        background-image: 
-            linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/kbc.webp');
-        background-size: cover, cover;
-        background-position: center, center;
-        background-repeat: no-repeat, no-repeat;
-    }
-
     /* Theatre Events */
     .event-card[data-event="dramatics"] .event-image {
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/dramatics.webp');
+            url('../assets/new_events/nukad-natak.png');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -183,22 +173,12 @@
         background-repeat: no-repeat, no-repeat;
     }
 
-    .event-card[data-event="power-lifting"] .event-image {
-        background-color: #1a1a1a;
-        background-image: 
-            linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/power lifting.webp');
-        background-size: cover, cover;
-        background-position: center, center;
-        background-repeat: no-repeat, no-repeat;
-    }
-
     /* Creative Events */
     .event-card[data-event="face-painting"] .event-image {
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/face painting.webp');
+            url('../assets/new_events/face_art.jpg');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -208,7 +188,7 @@
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/canvas painting.webp');
+            url('../assets/new_events/painting.jpg');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -218,7 +198,7 @@
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/mehndi.webp');
+            url('../assets/new_events/mehandi.jpg');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -228,17 +208,7 @@
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/rangoli.webp');
-        background-size: cover, cover;
-        background-position: center, center;
-        background-repeat: no-repeat, no-repeat;
-    }
-
-    .event-card[data-event="mandala-art"] .event-image {
-        background-color: #1a1a1a;
-        background-image: 
-            linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=800&q=80');
+            url('../assets/new_events/rangoli.jpg');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -248,7 +218,7 @@
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/roadies.webp');
+            url('../assets/new_events/Roadies.jpg');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -258,7 +228,7 @@
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/treasure hunt.webp');
+            url('../assets/new_events/treasure_hunt.jpg');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -302,7 +272,7 @@
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/fashion show.webp');
+            url('../assets/new_events/fashion_show.jpg');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -313,7 +283,7 @@
         background-color: #1a1a1a;
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/dance.webp');
+            url('../assets/new_events/dance.png');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;
@@ -335,28 +305,6 @@
         background-image: 
             linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
             url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80');
-        background-size: cover, cover;
-        background-position: center, center;
-        background-repeat: no-repeat, no-repeat;
-    }
-
-    /* Business Events */
-    .event-card[data-event="shark-tank"] .event-image {
-        background-color: #1a1a1a;
-        background-image: 
-            linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('../assets/grid/shark tank.webp');
-        background-size: cover, cover;
-        background-position: center, center;
-        background-repeat: no-repeat, no-repeat;
-    }
-
-    /* Photo & Film Events */
-    .event-card[data-event="framefest"] .event-image {
-        background-color: #1a1a1a;
-        background-image: 
-            linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%),
-            url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80');
         background-size: cover, cover;
         background-position: center, center;
         background-repeat: no-repeat, no-repeat;

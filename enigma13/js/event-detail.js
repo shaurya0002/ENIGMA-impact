@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // Event Detail Page - Dynamic Content Loading
 // ============================================
 
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Aatmanirbhar Bharat - Colors of Self-Reliance'
             ],
             duration: '120 minutes (2 hours)',
-            venue: 'Student Activity Centre Library',
+            venue: 'UIM',
             rules: [
                 'Participants must report 15 minutes before the event starts.',
                 'Painting colors used should be hypoallergenic and skin safe.',
@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
             canvasSize: '10 X 14 inches',
             duration: '2 hours',
+            venue: 'UIM',
             submissionFormat: 'Original work on a physical canvas',
             rules: [
                 'All participants must report to the venue 15 minutes prior to the commencement of the event.',
@@ -305,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
             category: 'Music',
             fee: '₹250 for two event participation',
             categories: 'Two separate categories - Solo and Group',
-            venue: 'Open Theater, UIT',
+            venue: 'Audi, UCER',
             performanceDuration: {
                 solo: '1:30 - 2 minutes',
                 group: '5 minutes',
@@ -348,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
             fee: '₹250 for two event participation',
             date: '22 November 2025',
             day: 'Saturday',
-            venue: 'Open Theater, UIT',
+            venue: 'Audi, UIT',
             duration: '5 minutes for SOLO (Including setup time)',
             registration: [
                 'For UGI Students: Offline',
@@ -512,14 +513,14 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'web-die': {
             name: 'Web Die',
-            type: 'Solo (Online)',
+            type: 'Solo (Offline)',
             category: 'Creative',
             fee: '₹250 for two event participation',
             description: 'A competitive front-end web development challenge requiring participants to design and develop a fully functional and visually appealing web page within a limited time based on a provided theme or task.',
             focus: 'Creativity, UI/UX understanding, responsive design skills, and clean coding practices.',
             eligibility: 'Open to all students interested in front-end development. Individual participation only.',
             date: '21st November 2025',
-            venue: 'Ground Floor Lab, United Institute of Management',
+            venue: 'UIT',
             submissionDeadline: '21st November 2025, 3:30 PM',
             resultDeclaration: '21st November 2025',
             technologyRestriction: 'Only HTML and CSS may be used (No JavaScript, libraries, or frameworks)',

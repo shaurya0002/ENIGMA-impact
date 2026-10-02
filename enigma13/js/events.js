@@ -6,26 +6,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Preload all event images immediately for faster display
     const eventImages = [
         // Literary
-        'https://images.unsplash.com/photo-1471478331149-c72f17e33c51?w=800&q=80', // Open Mic
+        'assets/new_events/open_mic.jpg', // Open Mic
         // Theatre
-        'https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80', // Dramatics
+        'assets/new_events/nukad-natak.png', // Dramatics
         // Sports
         'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&q=80', // Chess
         // Creative
-        'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&q=80', // Face Painting
-        'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80', // Canvas Painting
-        'https://images.unsplash.com/photo-1606800053563-1c1c0a1a0a0a?w=800&q=80', // Mehndi Art
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80', // Rangoli
-        'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80', // Roadies
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80', // Treasure Hunt
+        'assets/new_events/face_art.jpg', // Face Painting
+        'assets/new_events/painting.jpg', // Canvas Painting
+        'assets/new_events/mehandi.jpg', // Mehndi Art
+        'assets/new_events/rangoli.jpg', // Rangoli
+        'assets/new_events/Roadies.jpg', // Roadies
+        'assets/new_events/treasure_hunt.jpg', // Treasure Hunt
         // Online Events
         'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80', // Bug Brawl
         'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80', // Web Die
         'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80', // Gamers Arena
         // Fashion
-        'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80', // Fashion Show
+        'assets/new_events/fashion_show.jpg', // Fashion Show
         // Dance
-        'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80', // Dance
+        'assets/new_events/dance.png', // Dance
         // Music
         'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80', // Singing
         'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80'  // Instrumental

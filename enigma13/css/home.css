@@ -405,7 +405,7 @@
 
 /* Category-specific real image backgrounds */
 .category-card[href*="dance"] .category-image {
-    background-image: url('../assets/grid/dance.webp');
+    background-image: url('../assets/new_events/dance.png');
 }
 
 .category-card[href*="music"] .category-image {
@@ -413,15 +413,15 @@
 }
 
 .category-card[href*="creative"] .category-image {
-    background-image: url('../assets/grid/canvas%20painting.webp');
+    background-image: url('../assets/new_events/painting.jpg');
 }
 
 .category-card[href*="theatre"] .category-image {
-    background-image: url('../assets/grid/dramatics.webp');
+    background-image: url('../assets/new_events/nukad-natak.png');
 }
 
 .category-card[href*="fashion"] .category-image {
-    background-image: url('../assets/grid/fashion%20show.webp');
+    background-image: url('../assets/new_events/fashion_show.jpg');
 }
 
 .category-card[href*="gaming"] .category-image {
@@ -429,15 +429,11 @@
 }
 
 .category-card[href*="literary"] .category-image {
-    background-image: url('../assets/grid/open%20mic.webp');
+    background-image: url('../assets/new_events/open_mic.jpg');
 }
 
 .category-card[href*="sports"] .category-image {
-    background-image: url('../assets/grid/power%20lifting.webp');
-}
-
-.category-card[href*="photo-film"] .category-image {
-    background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80');
+    background-image: url('https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&q=80');
 }
 
 .category-overlay {
