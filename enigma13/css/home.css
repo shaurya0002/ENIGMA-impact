@@ -383,73 +383,73 @@
 
 .category-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
     z-index: 0;
-    opacity: 0.45;
+    opacity: 0.75;
+    filter: blur(4px) brightness(0.65) saturate(120%);
     transition: all var(--transition-normal);
+    transform: scale(1.04);
 }
 
 .category-card:hover .category-image {
-    opacity: 0.65;
+    opacity: 0.95;
+    filter: blur(1.5px) brightness(0.85) saturate(135%);
     transform: scale(1.08);
 }
 
-/* Category-specific background colors — clean, minimalist */
+/* Category-specific real image backgrounds */
 .category-card[href*="dance"] .category-image {
-    background: linear-gradient(135deg, #1a0533 0%, #3d0f6b 100%);
+    background-image: url('../assets/grid/dance.webp');
 }
 
 .category-card[href*="music"] .category-image {
-    background: linear-gradient(135deg, #001a33 0%, #003366 100%);
+    background-image: url('../assets/singer/Jassi%20gill.webp');
 }
 
 .category-card[href*="creative"] .category-image {
-    background: linear-gradient(135deg, #0d1a00 0%, #1f3300 100%);
+    background-image: url('../assets/grid/canvas%20painting.webp');
 }
 
 .category-card[href*="theatre"] .category-image {
-    background: linear-gradient(135deg, #1a0a00 0%, #3d1500 100%);
+    background-image: url('../assets/grid/dramatics.webp');
 }
 
 .category-card[href*="fashion"] .category-image {
-    background: linear-gradient(135deg, #1a001a 0%, #330033 100%);
+    background-image: url('../assets/grid/fashion%20show.webp');
 }
 
 .category-card[href*="gaming"] .category-image {
-    background: linear-gradient(135deg, #001a0d 0%, #003319 100%);
+    background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80');
 }
 
 .category-card[href*="literary"] .category-image {
-    background: linear-gradient(135deg, #1a1500 0%, #332a00 100%);
+    background-image: url('../assets/grid/open%20mic.webp');
 }
 
 .category-card[href*="sports"] .category-image {
-    background: linear-gradient(135deg, #00101a 0%, #002033 100%);
+    background-image: url('../assets/grid/power%20lifting.webp');
 }
 
 .category-card[href*="photo-film"] .category-image {
-    background: linear-gradient(135deg, #0d0d1a 0%, #1a1a33 100%);
+    background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80');
 }
 
 .category-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 11, 16, 0.4) 0%, rgba(10, 11, 16, 0.7) 100%);
     z-index: 1;
     transition: background var(--transition-normal);
-    mix-blend-mode: multiply;
 }
 
 .category-card:hover .category-overlay {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(10, 11, 16, 0.2) 0%, rgba(10, 11, 16, 0.5) 100%);
 }
 
 .category-content {

@@ -7,18 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const eventImages = [
         // Literary
         'https://images.unsplash.com/photo-1471478331149-c72f17e33c51?w=800&q=80', // Open Mic
-        'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80', // KBC Quiz
         // Theatre
         'https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80', // Dramatics
         // Sports
         'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&q=80', // Chess
-        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80', // Power Lifting
         // Creative
         'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&q=80', // Face Painting
         'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80', // Canvas Painting
         'https://images.unsplash.com/photo-1606800053563-1c1c0a1a0a0a?w=800&q=80', // Mehndi Art
         'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80', // Rangoli
-        'https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=800&q=80', // Mandala Art
         'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80', // Roadies
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80', // Treasure Hunt
         // Online Events
@@ -31,11 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80', // Dance
         // Music
         'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80', // Singing
-        'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80', // Instrumental
-        // Business
-        'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80', // Shark Tank
-        // Photo & Film
-        'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80' // Framefest
+        'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80'  // Instrumental
     ];
     
     // Preload images in parallel - start loading immediately
@@ -51,14 +44,60 @@ document.addEventListener('DOMContentLoaded', function() {
         img.src = url;
     });
     
-    // Filter functionality removed - all events are now visible by default
+    // Category Filter Functionality
     const eventCards = document.querySelectorAll('.event-card');
-    
-    // Show all events by default
-    eventCards.forEach(card => {
-        card.classList.add('visible');
-        card.style.display = 'block';
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    function filterEvents(category) {
+        const catLower = (category || 'all').toLowerCase();
+        
+        eventCards.forEach(card => {
+            const cardCategory = (card.getAttribute('data-category') || '').toLowerCase();
+            if (catLower === 'all' || cardCategory === catLower) {
+                card.classList.add('visible');
+                card.style.display = 'block';
+            } else {
+                card.classList.remove('visible');
+                card.style.display = 'none';
+            }
+        });
+
+        // Update active state on filter buttons
+        filterButtons.forEach(btn => {
+            const btnFilter = (btn.getAttribute('data-filter') || '').toLowerCase();
+            if (btnFilter === catLower) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    }
+
+    // Attach click listeners to filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+            filterEvents(filterValue);
+            
+            // Update URL search query without page reload
+            const url = new URL(window.location);
+            if (filterValue && filterValue !== 'all') {
+                url.searchParams.set('category', filterValue);
+            } else {
+                url.searchParams.delete('category');
+            }
+            window.history.replaceState({}, '', url);
+        });
     });
+
+    // Read category from URL query param on initial load (e.g. events.html?category=dance)
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category');
+    if (initialCategory) {
+        filterEvents(initialCategory);
+    } else {
+        filterEvents('all');
+    }
     
     // Function to load an image
     function loadEventImage(img) {

@@ -7,9 +7,9 @@
     <title>Events - ENIGMA XIV</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo/ENIGMA!_20251018_152032_0000.png">
-    <link rel="shortcut icon" type="image/png" href="assets/logo/ENIGMA!_20251018_152032_0000.png">
-    <link rel="apple-touch-icon" href="assets/logo/ENIGMA!_20251018_152032_0000.png">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="apple-touch-icon" href="assets/logo.jpg">
     <!-- Resource Hints for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,12 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"></noscript>
     <!-- Preload event images for faster loading -->
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1471478331149-c72f17e33c51?w=800&q=80">
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&q=80">
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1606800053563-1c1c0a1a0a0a?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80">
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80">
@@ -37,8 +34,6 @@
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80">
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80">
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80">
     <link rel="dns-prefetch" href="https://images.unsplash.com">
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     <!-- Critical CSS -->
@@ -60,7 +55,7 @@
     <header class="header" id="header">
         <div class="header-container">
             <a href="index.html" class="header-logo" aria-label="Go to Home Page">
-                <img src="assets/logo/ENIGMA!_20251018_152032_0000.png" alt="ENIGMA XIII Logo" class="enigma-logo-img">
+                <img src="assets/logo.jpg" alt="ENIGMA XIV Logo" class="enigma-logo-img">
             </a>
             <nav>
                 <ul class="nav-menu">
@@ -96,6 +91,19 @@
             <div class="container">
                 <h1 class="page-title fade-in">Events</h1>
 
+                <!-- Event Category Filter Buttons -->
+                <div class="event-filters fade-in">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="dance">Dance</button>
+                    <button class="filter-btn" data-filter="music">Music</button>
+                    <button class="filter-btn" data-filter="creative">Creative</button>
+                    <button class="filter-btn" data-filter="theatre">Theatre</button>
+                    <button class="filter-btn" data-filter="fashion">Fashion</button>
+                    <button class="filter-btn" data-filter="gaming">Gaming</button>
+                    <button class="filter-btn" data-filter="literary">Literary</button>
+                    <button class="filter-btn" data-filter="sports">Sports</button>
+                </div>
+
                 <!-- Events Grid -->
                 <div class="events-grid" id="eventsGrid">
                     <!-- Event Cards will be dynamically filtered -->
@@ -110,20 +118,6 @@
                             <p class="event-venue">Audi, UCER</p>
                             <p class="event-fee">Registration Fee: ₹300 for two events</p>
                             <a href="event-detail.html?event=open-mic" class="btn btn-outline">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card fade-in" data-category="literary" data-event="kbc-quiz">
-                        <div class="event-image">
-                            <div class="event-overlay"></div>
-                        </div>
-                        <div class="event-info">
-                            <span class="event-category">Literary</span>
-                            <span class="event-mode offline">Offline</span>
-                            <h3>KBC Quiz</h3>
-                            <p class="event-venue">New CRC Conference Hall, UCER</p>
-                            <p class="event-fee">Registration Fee: ₹300 for two events</p>
-                            <a href="event-detail.html?event=kbc-quiz" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
 
@@ -267,20 +261,6 @@
                         </div>
                     </div>
 
-                    <div class="event-card fade-in" data-category="sports" data-event="power-lifting">
-                        <div class="event-image">
-                            <div class="event-overlay"></div>
-                        </div>
-                        <div class="event-info">
-                            <span class="event-category">Sports</span>
-                            <span class="event-mode offline">Offline</span>
-                            <h3>Power Lifting</h3>
-                            <p class="event-venue">Ground, UIT</p>
-                            <p class="event-fee">Registration Fee: ₹300 for two events</p>
-                            <a href="event-detail.html?event=power-lifting" class="btn btn-outline">View Details</a>
-                        </div>
-                    </div>
-
                     <div class="event-card fade-in" data-category="creative" data-event="mehndi-art">
                         <div class="event-image">
                             <div class="event-overlay"></div>
@@ -306,47 +286,6 @@
                             <p class="event-venue">Conference Hall, UIP</p>
                             <p class="event-fee">Registration Fee: ₹300 for two events</p>
                             <a href="event-detail.html?event=rangoli" class="btn btn-outline">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card fade-in" data-category="creative" data-event="mandala-art">
-                        <div class="event-image">
-                            <div class="event-overlay"></div>
-                        </div>
-                        <div class="event-info">
-                            <span class="event-category">Creative</span>
-                            <span class="event-mode offline">Offline</span>
-                            <h3>Mandala Art</h3>
-                            <p class="event-venue">3rd Floor, UCP</p>
-                            <p class="event-fee">Registration Fee: ₹300 for two events</p>
-                            <a href="event-detail.html?event=mandala-art" class="btn btn-outline">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card fade-in" data-category="business" data-event="shark-tank">
-                        <div class="event-image">
-                            <div class="event-overlay"></div>
-                        </div>
-                        <div class="event-info">
-                            <span class="event-category">Business</span>
-                            <span class="event-mode offline">Offline</span>
-                            <h3>Shark Tank</h3>
-                            <p class="event-venue">Induction Hall, UCP</p>
-                            <p class="event-fee">Registration Fee: ₹300 for two events</p>
-                            <a href="event-detail.html?event=shark-tank" class="btn btn-outline">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="event-card fade-in" data-category="photo-film" data-event="framefest">
-                        <div class="event-image">
-                            <div class="event-overlay"></div>
-                        </div>
-                        <div class="event-info">
-                            <span class="event-category">Photo & Film</span>
-                            <h3>Framefest</h3>
-                            <p class="event-venue">UGI</p>
-                            <p class="event-fee">Registration Fee: ₹300 for two events</p>
-                            <a href="event-detail.html?event=framefest" class="btn btn-outline">View Details</a>
                         </div>
                     </div>
 
@@ -417,7 +356,7 @@
                 <!-- Column 1: Logo & Description -->
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <img src="assets/logo/ENIGMA!_20251018_152032_0000.png" alt="ENIGMA XIII Logo" class="enigma-logo-img">
+                        <img src="assets/logo.jpg" alt="ENIGMA XIV Logo" class="enigma-logo-img">
                         <span>ENIGMA XIV</span>
                     </div>
                     <p>The official cultural festival of United Group of Institutions.</p>

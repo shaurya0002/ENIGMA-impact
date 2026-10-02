@@ -7,10 +7,18 @@
     min-height: 100vh;
 }
 
-.registration-container {
-    max-width: 1000px;
+.registration-section .container {
+    max-width: 1400px;
+    width: 96%;
     margin: 0 auto;
-    padding: var(--spacing-lg);
+    padding: 0 var(--spacing-sm);
+}
+
+.registration-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-md) 0;
 }
 
 .registration-container h1 {
@@ -28,19 +36,21 @@
     margin-bottom: var(--spacing-xl);
 }
 
-/* Embedded Registration Form Styles */
+/* Embedded Registration Form Styles - Wide Side-by-Side View */
 .registration-embed {
     background-color: var(--color-surface);
     border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-md);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     overflow: hidden;
+    width: 100%;
 }
 
 .registration-iframe {
     width: 100%;
-    min-height: 800px;
+    min-height: 950px;
     border: none;
     border-radius: var(--radius-md);
     background-color: #fff;

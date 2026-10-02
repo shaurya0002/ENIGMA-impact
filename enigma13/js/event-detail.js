@@ -35,51 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' }
             ]
         },
-        'kbc-quiz': {
-            name: 'KBC Quiz',
-            type: 'Solo (Offline)',
-            category: 'Literary',
-            fee: '₹300 for two event participation',
-            rounds: [
-                {
-                    name: 'Round 1: Elimination Round',
-                    participants: '100',
-                    objective: 'Reduce to 40 participants',
-                    structure: '15 MCQs, 30 seconds per question, 1 point for correct answer, negative marking for incorrect',
-                    cutOff: 'Top 40 participants proceed'
-                },
-                {
-                    name: 'Round 2: Fastest Finger First',
-                    participants: '40',
-                    objective: 'Identify 20 participants for final round',
-                    structure: 'Single question, 10 seconds time limit, first 20 correct answers proceed'
-                },
-                {
-                    name: 'Round 3: Final Round',
-                    participants: '20',
-                    objective: 'Answer 15 questions with increasing difficulty',
-                    structure: 'Questions 1-5: 30 seconds each, Questions 6-10: 45 seconds each, Questions 11-15: 60 seconds each',
-                    lifelines: '2 lifelines per participant: 50:50, Flip of question'
-                }
-            ],
-            rules: [
-                'Participants must stay silent during questioning.',
-                'Participants can use pen and paper for calculations.',
-                'Participants must buzz in to answer in Round 2.',
-                'Incorrect answers in Round 2 lead to disqualification.',
-                'Lifelines can be used only once per question.'
-            ],
-            judging: [
-                'Accuracy: 40%',
-                'Speed: 30%',
-                'Correct answers increase prize money based on difficulty levels'
-            ],
-            prize: '₹5,000',
-            coordinators: [
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' },
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' }
-            ]
-        },
         'dramatics': {
             name: 'Dramatics/Nukkad Natak',
             type: 'Team (Offline)',
@@ -443,28 +398,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' }
             ]
         },
-        'power-lifting': {
-            name: 'Power Lifting',
-            type: 'Solo (Offline)',
-            category: 'Sports',
-            fee: '₹300 for two event participation',
-            rules: [
-                'Weight categories will be announced.',
-                'Standard powerlifting rules apply.',
-                'Safety equipment mandatory.',
-                'Medical clearance required.',
-                'Decision of judges will be final.'
-            ],
-            judging: [
-                'Total Weight Lifted: 100%',
-                'Tie-breaker: Body weight ratio'
-            ],
-            prize: '₹10,000',
-            coordinators: [
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' },
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' }
-            ]
-        },
         'mehndi-art': {
             name: 'Mehndi Art (Kaladarshan)',
             type: 'Solo (Offline)',
@@ -534,104 +467,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' }
             ]
         },
-        'mandala-art': {
-            name: 'Mandala Art',
-            type: 'Solo (Offline)',
-            category: 'Creative',
-            fee: '₹300 for two event participation',
-            tagline: 'Unfold Your Patterns of Creativity',
-            competitionStructure: [
-                {
-                    round: 'Round 1 - Free Flow of Imagination',
-                    theme: 'Artist\'s Choice',
-                    duration: '1 hour 30 minutes (1.5 hours)',
-                    objective: 'Showcase your creativity, technique, and Individuality through your chosen concept.',
-                    note: 'Let your Imagination take the lead — from traditional patterns to modern interpretations, the canvas is yours!'
-                },
-                {
-                    round: 'Round 2 - The Mystery Mandala',
-                    theme: 'Surprise Theme (revealed on the day of the event)',
-                    duration: '2 hours',
-                    objective: 'Test your adaptability and artistic spontaneity as you craft a mandala based on the given theme.',
-                    note: 'Be ready for a creative twist — this round will challenge how well you can think on the spot and bring ideas to life.'
-                }
-            ],
-            rules: [
-                'Participants must bring their own drawing/painting materials (paper sheets, pens, colors, compasses, rulers, etc.).',
-                'Canvas Size: A3 or A4 sheets only.',
-                'Medium: Any medium of your choice — pencil, pen, markers, watercolor, acrylics, etc.',
-                'Artwork must be original. Tracing or digital assistance is strictly prohibited.',
-                'Late submissions will lead to point deductions.'
-            ],
-            judging: [
-                'Creativity & Originality',
-                'Neatness & Symmetry',
-                'Theme Representation',
-                'Color Combination',
-                'Overall Presentation',
-                'Depiction of Artwork (2-minutes explanation by participant)'
-            ],
-            prize: '₹5,000',
-            coordinators: [
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' },
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' }
-            ]
-        },
-        'shark-tank': {
-            name: 'Shark Tank',
-            type: 'Team (Offline)',
-            category: 'Business',
-            fee: '₹300 for two event participation',
-            rules: [
-                'Team size: 2-4 members.',
-                'Present your business idea.',
-                'Time limit: 10 minutes presentation + 5 minutes Q&A.',
-                'Original business ideas required.',
-                'Decision of judges will be final.'
-            ],
-            judging: [
-                'Idea Innovation: 30%',
-                'Business Viability: 30%',
-                'Presentation: 25%',
-                'Q&A Performance: 15%'
-            ],
-            prize: '₹15,000',
-            coordinators: [
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' },
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' }
-            ]
-        },
-        'framefest': {
-            name: 'Framefest',
-            type: 'Solo/Team (Offline)',
-            category: 'Photo & Film',
-            fee: '₹300 for two event participation',
-            eventType: 'Photography & Videography Reel-Making Competition',
-            eventDuration: '21st – 22nd November',
-            venue: 'Ground Floor Conference Hall, United Institute of Management',
-            resultDeclaration: '22nd November (Final Day of Enigma XIII)',
-            description: 'Frame Fest is dedicated to capturing the vibrant spirit of Enigma XIII through visual storytelling. Participants are required to record photos and videos of various events across both days and create a 1-1.5 minute highlight reel showcasing energy, enthusiasm, and memorable moments.',
-            submissionRequirement: 'Every participant/team must submit both: 1) A 1-1.5 minute reel, and 2) 3-5 best photographs clicked during the fest',
-            rules: [
-                'Submit original photography or short films.',
-                'Reel duration: 1-1.5 minutes.',
-                'Submit 3-5 best photographs.',
-                'All entries must be original.',
-                'Capture events across both days of Enigma XIII.',
-                'Decision of judges will be final.'
-            ],
-            judging: [
-                'Creativity: 30%',
-                'Technical Quality: 30%',
-                'Story/Composition: 25%',
-                'Overall Impact: 15%'
-            ],
-            prize: '₹10,000',
-            coordinators: [
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' },
-                { name: 'Coordinator Name', phone: '+91-XXXXXXXXXX' }
-            ]
-        },
+
         'treasure-hunt': {
             name: 'Treasure Hunt - The Guardians and the Portal of Enigmara',
             type: 'Team (Offline)',
