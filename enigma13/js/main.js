@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Hero Video Autoplay & Compatibility Controller
-    const heroVideo = document.querySelector('.hero-video');
-    if (heroVideo) {
+    // Hero Video Autoplay & Compatibility Controller (HTML5 video fallback)
+    const heroVideo = document.querySelector('video.hero-video');
+    if (heroVideo && typeof heroVideo.play === 'function') {
         // Force muted inline autoplay
         heroVideo.muted = true;
         heroVideo.defaultMuted = true;
